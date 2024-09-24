@@ -36,6 +36,21 @@ app = rio.App(
             page_url="news-page",
             build=pages.NewsPage,
         ),
+        rio.Page(
+            name="Footer",
+            page_url="footer-page",
+            build=pages.FooterPage,
+        ),
+        rio.Page(
+            name="Stats",
+            page_url="stats-page",
+            build=pages.StatsPage,
+        ),
+        rio.Page(
+            name="Component",
+            page_url="component-page",
+            build=pages.ComponentPage,
+        ),
     ],
     # You can optionally provide a root component for the app. By default,
     # a simple `rio.PageView` is used. By providing your own component, you

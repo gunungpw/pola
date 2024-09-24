@@ -5,8 +5,6 @@ from typing import *  # type: ignore
 
 import rio
 
-from .. import components as comps
-
 
 class Navbar(rio.Component):
     """
@@ -74,6 +72,42 @@ class Navbar(rio.Component):
                                 ),
                             ),
                             "/news-page",
+                        ),
+                        rio.Link(
+                            rio.Button(
+                                "Footer",
+                                icon="material/news",
+                                style=(
+                                    "major"
+                                    if active_page_url_segment == "footer-page"
+                                    else "plain"
+                                ),
+                            ),
+                            "/footer-page",
+                        ),
+                        rio.Link(
+                            rio.Button(
+                                "Stats",
+                                icon="material/list",
+                                style=(
+                                    "major"
+                                    if active_page_url_segment == "stats-page"
+                                    else "plain"
+                                ),
+                            ),
+                            "/stats-page",
+                        ),
+                        rio.Link(
+                            rio.Button(
+                                "Component",
+                                icon="material/apps",
+                                style=(
+                                    "major"
+                                    if active_page_url_segment == "component-page"
+                                    else "plain"
+                                ),
+                            ),
+                            "/component-page",
                         ),
                         spacing=1,
                         margin=1,
