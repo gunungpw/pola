@@ -28,11 +28,11 @@ class RootPage(rio.Component):
             # of all other components.
             comps.Navbar(),
             # Add some empty space so the navbar doesn't cover the content.
-            rio.Spacer(height=5),
+            rio.Spacer(),
             # The page view will display the content of the current page.
             rio.PageView(
                 # Make sure the page view takes up all available space.
-                height="natural",
+                # min_height="natural",
             ),
             # The footer is also common to all pages, so place it here.
             rio.Spacer(),

@@ -11,7 +11,9 @@ class FooterSimple(rio.Component):
         footer_grid = rio.Grid(
             [
                 rio.Column(
-                    rio.Icon("material/warehouse", height=3, width=3, align_x=0),
+                    rio.Icon(
+                        "material/warehouse", min_height=3, min_width=3, align_x=0
+                    ),
                     rio.Column(
                         rio.Text("ACME Industries Ltd."),
                         rio.Text("Providing reliable tech since 1992"),

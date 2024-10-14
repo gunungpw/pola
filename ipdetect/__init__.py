@@ -26,29 +26,29 @@ theme = rio.Theme.from_colors(
 app = rio.App(
     name="ipdetect",
     pages=[
-        rio.Page(
+        rio.ComponentPage(
             name="Home",
-            page_url="",
+            url_segment="",
             build=pages.HomePage,
         ),
-        rio.Page(
+        rio.ComponentPage(
             name="NewsPage",
-            page_url="news-page",
+            url_segment="news-page",
             build=pages.NewsPage,
         ),
-        rio.Page(
+        rio.ComponentPage(
             name="Footer",
-            page_url="footer-page",
+            url_segment="footer-page",
             build=pages.FooterPage,
         ),
-        rio.Page(
+        rio.ComponentPage(
             name="Stats",
-            page_url="stats-page",
+            url_segment="stats-page",
             build=pages.StatsPage,
         ),
-        rio.Page(
+        rio.ComponentPage(
             name="Component",
-            page_url="component-page",
+            url_segment="component-page",
             build=pages.ComponentPage,
         ),
     ],

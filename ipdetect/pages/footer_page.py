@@ -84,8 +84,8 @@ class CardSimple(rio.Component):
                 ),
             ],
             align_x=0.5,
-            height=20,
-            width=40,
+            min_height=20,
+            min_width=40,
         )
         return footer_grid
 

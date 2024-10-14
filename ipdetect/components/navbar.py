@@ -33,7 +33,7 @@ class Navbar(rio.Component):
         # you've passed the app during creation. Since multiple pages can be
         # active at a time (e.g. /foo/bar/baz), this is a list.
         active_page = self.session.active_page_instances[0]
-        active_page_url_segment = active_page.page_url
+        active_page_url_segment = active_page.url_segment
 
         # The navbar should appear above all other components. This is easily
         # done by using a `rio.Overlay` component.
@@ -48,8 +48,8 @@ class Navbar(rio.Component):
                         rio.Link(
                             rio.IconButton(
                                 "rio/logo",
-                                style="plain",
-                                size=2.5,
+                                style="plain-text",
+                                min_size=2.5,
                             ),
                             "/",
                         ),
@@ -68,7 +68,7 @@ class Navbar(rio.Component):
                                 style=(
                                     "major"
                                     if active_page_url_segment == "news-page"
-                                    else "plain"
+                                    else "plain-text"
                                 ),
                             ),
                             "/news-page",
@@ -80,7 +80,7 @@ class Navbar(rio.Component):
                                 style=(
                                     "major"
                                     if active_page_url_segment == "footer-page"
-                                    else "plain"
+                                    else "plain-text"
                                 ),
                             ),
                             "/footer-page",
@@ -92,7 +92,7 @@ class Navbar(rio.Component):
                                 style=(
                                     "major"
                                     if active_page_url_segment == "stats-page"
-                                    else "plain"
+                                    else "plain-text"
                                 ),
                             ),
                             "/stats-page",
@@ -104,7 +104,7 @@ class Navbar(rio.Component):
                                 style=(
                                     "major"
                                     if active_page_url_segment == "component-page"
-                                    else "plain"
+                                    else "plain-text"
                                 ),
                             ),
                             "/component-page",
