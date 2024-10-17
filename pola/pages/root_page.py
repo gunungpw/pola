@@ -1,11 +1,8 @@
 from __future__ import annotations
 
-from dataclasses import KW_ONLY, field
-from typing import *  # type: ignore
-
 import rio
 
-from .. import components as comps
+from pola.components import Footer, Navbar
 
 
 class RootPage(rio.Component):
@@ -26,15 +23,19 @@ class RootPage(rio.Component):
         return rio.Column(
             # The navbar contains a `rio.Overlay`, so it will always be on top
             # of all other components.
-            comps.Navbar(),
+            Navbar(),
             # Add some empty space so the navbar doesn't cover the content.
-            rio.Spacer(),
+            rio.Spacer(min_height=5),
             # The page view will display the content of the current page.
-            rio.PageView(
-                # Make sure the page view takes up all available space.
-                # min_height="natural",
+            rio.Row(
+                rio.Spacer(),
+                rio.PageView(
+                    # Make sure the page view takes up all available space.
+                    # min_height="natural",
+                ),
+                rio.Spacer(),
             ),
             # The footer is also common to all pages, so place it here.
             rio.Spacer(),
-            comps.Footer(),
+            Footer(),
         )

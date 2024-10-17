@@ -1,8 +1,5 @@
 from __future__ import annotations
 
-from dataclasses import KW_ONLY, field  # noqa: F401
-from typing import *  # type: ignore
-
 import rio
 from ..components import stats
 
@@ -19,7 +16,10 @@ class Stats(rio.Component):
                         margin=0.5,
                     ),
                     rio.Icon(
-                        "material/favorite:fill", height=3, width=3, fill=rio.Color.RED
+                        "material/favorite:fill",
+                        min_height=3,
+                        min_width=3,
+                        fill=rio.Color.RED,
                     ),
                     spacing=0.5,
                 ),
@@ -35,7 +35,10 @@ class Stats(rio.Component):
                         margin=0.5,
                     ),
                     rio.Icon(
-                        "material/bolt:fill", height=3, width=3, fill=rio.Color.PINK
+                        "material/bolt:fill",
+                        min_height=3,
+                        min_width=3,
+                        fill=rio.Color.PINK,
                     ),
                     spacing=0.5,
                 ),
@@ -51,7 +54,10 @@ class Stats(rio.Component):
                         margin=0.5,
                     ),
                     rio.Icon(
-                        "material/task:fill", height=3, width=3, fill=rio.Color.GREEN
+                        "material/task:fill",
+                        min_height=3,
+                        min_width=3,
+                        fill=rio.Color.GREEN,
                     ),
                     spacing=0.5,
                 ),

@@ -1,10 +1,5 @@
 from __future__ import annotations
-
-from dataclasses import KW_ONLY, field  # noqa: F401
-from typing import *  # type: ignore
-
 import rio
-from ..components import stats
 from .stats_page import Stats
 
 

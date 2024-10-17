@@ -1,12 +1,7 @@
-from __future__ import annotations
-
-from dataclasses import KW_ONLY, field
-from typing import *  # type: ignore
-
 import rio
 
 
-class CardSimple(rio.Component):
+class FooterGrid(rio.Component):
     def build(self) -> rio.Component:
         footer_grid = rio.Grid(
             [
@@ -88,12 +83,3 @@ class CardSimple(rio.Component):
             min_width=40,
         )
         return footer_grid
-
-
-class FooterPage(rio.Component):
-    """
-    A sample page, containing recent news articles about the company.
-    """
-
-    def build(self) -> rio.Component:
-        return CardSimple()

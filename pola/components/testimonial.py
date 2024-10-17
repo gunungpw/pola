@@ -1,11 +1,7 @@
 from __future__ import annotations
 
-from dataclasses import KW_ONLY, field
-from typing import *  # type: ignore
-
 import rio
 
-from .. import components as comps
 
 class Testimonial(rio.Component):
     """
@@ -51,6 +47,5 @@ class Testimonial(rio.Component):
             # Important colors such as primary, secondary, neutral and
             # background are available as string constants for easy access.
             color="primary",
-            width=20,
+            min_width=20,
         )
-

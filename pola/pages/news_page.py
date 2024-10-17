@@ -1,10 +1,6 @@
 from __future__ import annotations
 
-from dataclasses import KW_ONLY, field
-from typing import *  # type: ignore
-
 import rio
-from pathlib import Path
 
 
 class CardSimple(rio.Component):
@@ -13,7 +9,7 @@ class CardSimple(rio.Component):
             rio.Column(
                 rio.Rectangle(
                     fill=rio.ImageFill(
-                        image=Path(self.session.assets / "shoes.webp"),
+                        image=self.session.assets.joinpath("shoes.webp"),
                         fill_mode="stretch",
                     ),
                     min_height=15,

@@ -1,12 +1,10 @@
 from __future__ import annotations
 
 from pathlib import Path
-from typing import *  # type: ignore
 
 import rio
 
 from . import pages
-from . import components as comps
 
 # Define a theme for Rio to use.
 #
@@ -61,5 +59,5 @@ app = rio.App(
     # so the currently active page is still visible.
     build=pages.RootPage,
     theme=theme,
-    assets_dir=Path(__file__).parent / "assets",
+    assets_dir=Path(__file__).parent.joinpath("assets"),
 )

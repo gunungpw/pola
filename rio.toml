@@ -5,7 +5,7 @@
 # This is either "website" or "app"
 app-type = "website"
 # The name of your Python module
-main-module = "ipdetect"
+main-module = "pola"
 # All files which are part of your project. Changes to these will trigger a
 # reload and they will be packed up when deploying.
 project-files = ["*.py", "/assets/", "/rio.toml"]

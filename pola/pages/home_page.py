@@ -1,7 +1,5 @@
 from __future__ import annotations
 
-from typing import *  # type: ignore
-
 import rio
 
 
@@ -11,4 +9,4 @@ class HomePage(rio.Component):
     """
 
     def build(self) -> rio.Component:
-        return rio.Column(rio.Text("RIO COMPONENT", style="heading1"))
+        return rio.Column(rio.Text("RIO COMPONENT", style="heading1", justify="center"))

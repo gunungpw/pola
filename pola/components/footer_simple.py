@@ -1,8 +1,3 @@
-from __future__ import annotations
-
-from dataclasses import KW_ONLY, field
-from typing import *  # type: ignore
-
 import rio
 
 
@@ -59,48 +54,8 @@ class FooterSimple(rio.Component):
                 ),
             ],
             align_x=0.5,
-            width=50,
-            height=10,
+            min_width=50,
+            min_height=10,
             margin_bottom=1,
         )
         return footer_grid
-
-
-class Footer(rio.Component):
-    """
-    A simple, static component which displays a footer with the company name and
-    website name.
-    """
-
-    def build(self) -> rio.Component:
-        return rio.Card(
-            content=rio.Column(
-                # FooterSimple(),
-                # rio.Separator(),
-                # rio.Row(
-                #     rio.Icon("material/warehouse", height=2, width=2),
-                #     rio.Text(
-                #         "Copyright © 2024 - All right reserved by ACME Industries Ltd",
-                #         style="dim",
-                #     ),
-                #     rio.Spacer(),
-                #     rio.Icon("material/grade:fill", height=2, width=2),
-                #     rio.Icon("material/bolt:fill", width=2, height=2),
-                #     rio.Icon("material/heart_plus:fill", width=2, height=2),
-                #     spacing=0.5,
-                #     margin=1,
-                # ),
-                rio.Separator(),
-                rio.Row(
-                    rio.Text(
-                        "Copyright © 2024 - All right reserved by ACME Industries Ltd",
-                        justify="center",
-                    ),
-                    spacing=1,
-                    margin=1,
-                    align_x=0.5,
-                ),
-            ),
-            color="hud",
-            corner_radius=0,
-        )
