@@ -4,7 +4,7 @@ from pathlib import Path
 
 import rio
 
-from . import pages
+from pola import pages
 
 # Define a theme for Rio to use.
 #
@@ -22,7 +22,7 @@ theme = rio.Theme.from_colors(
 
 # Create the Rio app
 app = rio.App(
-    name="ipdetect",
+    name="Pola",
     pages=[
         rio.ComponentPage(
             name="Home",
@@ -43,11 +43,6 @@ app = rio.App(
             name="Stats",
             url_segment="stats-page",
             build=pages.StatsPage,
-        ),
-        rio.ComponentPage(
-            name="Component",
-            url_segment="component-page",
-            build=pages.ComponentPage,
         ),
     ],
     # You can optionally provide a root component for the app. By default,

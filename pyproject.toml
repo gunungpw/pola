@@ -4,4 +4,7 @@ version = "0.2.0"
 description = "Add your description here"
 readme = "README.md"
 requires-python = ">=3.12"
-dependencies = ["rio-ui==0.10.4"]
+dependencies = ["rio-ui"]
+
+[dependency-groups]
+build = ["nuitka>=2.4.11"]

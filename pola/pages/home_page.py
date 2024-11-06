@@ -3,6 +3,7 @@ from __future__ import annotations
 import rio
 
 
+@rio.page(url_segment="", name="Pola")
 class HomePage(rio.Component):
     """
     A sample page, containing a greeting and some testimonials.

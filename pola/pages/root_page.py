@@ -28,12 +28,10 @@ class RootPage(rio.Component):
             rio.Spacer(min_height=5),
             # The page view will display the content of the current page.
             rio.Row(
-                rio.Spacer(),
                 rio.PageView(
                     # Make sure the page view takes up all available space.
                     # min_height="natural",
                 ),
-                rio.Spacer(),
             ),
             # The footer is also common to all pages, so place it here.
             rio.Spacer(),

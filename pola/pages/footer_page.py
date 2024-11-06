@@ -43,4 +43,5 @@ class FooterPage(rio.Component):
                     language="python",
                 ),
             ),
+            margin_x=2,
         )
